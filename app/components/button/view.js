@@ -11,19 +11,14 @@ const {
 
 class Button extends Component {
 
-    constructor(props) {
+  constructor(props) {
     super(props);
-    this.state = {
-      viewState: this.props.states
-    };
   }
-
     render(){
         const {
             onPress,
             title,
-        } = this.state.viewState
-
+        } =  this.props.states
         return(
             <TouchableOpacity activeOpacity={ 0.8 } onPress={() => onPress()} style = { styles.button }>
                 <Text style = { styles.buttonText }>{ title }</Text>
