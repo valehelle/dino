@@ -1,8 +1,8 @@
 import * as types from '../helpers/type'
 
-export function fetchRecipes(ingredients){
+export function fetchDinosours(ingredients){
     return(dispatch, getState) => {
-        recipe = [
+        dinosours = [
             {
                 'id':1,
                 'name':'hazmi'
@@ -21,6 +21,13 @@ export function fetchRecipes(ingredients){
             },            
             ]
 
-        return dispatch(setSearchedRecipes({ recipes: recipe }))
+        return dispatch(saveDinosour({ dinosours: dinosours }))
     }
+}
+
+export function saveDinosour({ dinosours }){
+    return {
+        type: types.SAVE_DINOSOUR,
+        dinosours: dinosours,
+    }   
 }

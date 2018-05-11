@@ -1,5 +1,5 @@
-import * as RecipeActions from './recipe'
+import * as dinosourActions from './dinosour'
 
 export const ActionCreators = Object.assign({},
-    RecipeActions,
+    dinosourActions,
 )

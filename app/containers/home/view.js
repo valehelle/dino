@@ -10,7 +10,7 @@ const {
 
 class Home extends Component{
     startButtonPress(){
-        
+        this.props.screenProps.fetchDinosours()
     }
     render(){
 
