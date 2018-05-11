@@ -9,13 +9,28 @@ const {
 } = ReactNative
 
 class Alphabet extends Component{
+    componentDidMount(){
+        this.props.screenProps.fetchDinosours()
+    }
+
+
+    _renderDinosour(){
+        if(this.props.dinosours != undefined ){
+           return  (<Text>Name: {this.props.dinosours[0].name} </Text>)
+        }
+    }
+
     render(){
         return (
-            <View>alphabet container</View>
+            <View>
+                {this._renderDinosour()}
+            </View>
         )
     }
 }
  function mapStateToProps(state){
-    return {}
+    return {
+        dinosours: state.dinosours.list
+    }
 }
 export default connect(mapStateToProps)(Alphabet)

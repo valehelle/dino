@@ -5,20 +5,28 @@ export function fetchDinosours(ingredients){
         dinosours = [
             {
                 'id':1,
-                'name':'hazmi'
+                'name':'Aazmi',
+                'alphabet': 'A',
+                'sound': 'sound.mp3',
+                'image': 'dinosour.jpg',
+                'pronunciation': 'A-A'
             },
             {
                 'id':2,
-                'name':'dddd'
+                'name':'Bazmi',
+                'alphabet': 'B',
+                'sound': 'sound.mp3',
+                'image': 'dinosour.jpg',
+                'pronunciation': 'A-B'
             },
             {
                 'id':3,
-                'name':'zzz'
-            },
-            {
-                'id':4,
-                'name':'fffff'
-            },            
+                'name':'Cazmi',
+                'alphabet': 'C',
+                'sound': 'sound.mp3',
+                'image': 'dinosour.jpg',
+                'pronunciation': 'A-C'
+            },      
             ]
 
         return dispatch(saveDinosour({ dinosours: dinosours }))

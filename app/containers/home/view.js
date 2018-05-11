@@ -6,17 +6,22 @@ import  Button  from '../../components/button/view'
 const {
     View,
     Text,
+    Image
 } = ReactNative
 
 class Home extends Component{
     startButtonPress(){
-        this.props.screenProps.fetchDinosours()
+        this.props.navigation.navigate('Alphabet')
+        
     }
     render(){
 
         return ( 
             <View style = { styles.about } >
                 <Text>Hello World</Text>
+                <Image
+                    source={require('../../assests/images/dinosour.jpg')}
+                />
                 <Button states={{title: 'Start' ,onPress: this.startButtonPress.bind(this)}} />
             </View>
         )
