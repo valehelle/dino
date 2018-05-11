@@ -10,13 +10,14 @@ const {
 
 class Home extends Component{
     startButtonPress(){
+        
     }
     render(){
 
         return ( 
             <View style = { styles.about } >
                 <Text>Hello World</Text>
-                <Button states={{title: 'Create' ,onPress: this.startButtonPress.bind(this)}} />
+                <Button states={{title: 'Start' ,onPress: this.startButtonPress.bind(this)}} />
             </View>
         )
     }
