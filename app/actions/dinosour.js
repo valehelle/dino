@@ -8,7 +8,7 @@ export function fetchDinosours(ingredients){
                 'name':'Aazmi',
                 'alphabet': 'A',
                 'sound': 'sound.mp3',
-                'image': 'dinosour.jpg',
+                'image': require('../assests/images/dinosour.jpg'),
                 'pronunciation': 'A-A'
             },
             {
@@ -16,7 +16,7 @@ export function fetchDinosours(ingredients){
                 'name':'Bazmi',
                 'alphabet': 'B',
                 'sound': 'sound.mp3',
-                'image': 'dinosour.jpg',
+                'image': require('../assests/images/dinosour2.jpg'),
                 'pronunciation': 'A-B'
             },
             {
@@ -24,7 +24,7 @@ export function fetchDinosours(ingredients){
                 'name':'Cazmi',
                 'alphabet': 'C',
                 'sound': 'sound.mp3',
-                'image': 'dinosour.jpg',
+                'image': require('../assests/images/dinosour.jpg'),
                 'pronunciation': 'A-C'
             },      
             ]

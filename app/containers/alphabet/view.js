@@ -7,6 +7,7 @@ import  Button  from '../../components/button/view'
 const {
     View,
     Text,
+    Image,
 } = ReactNative
 
 class Alphabet extends Component{
@@ -23,6 +24,19 @@ class Alphabet extends Component{
     
     nextButtonPress(){
         this.setState({position: this.state.position + 1})
+        // Import the react-native-sound module
+        var Sound = require('react-native-sound');
+
+        // Enable playback in silence mode
+        Sound.setCategory('Playback');
+
+        let sound = new Sound('SampleAudio_0.4mb.mp3', Sound.MAIN_BUNDLE, (error) => {
+                    if (error) {
+                        alert('failed to load the sound', error);
+                    } else {
+                        sound.play(); // have to put the call to play() in the onload callback
+                    }
+                });
     }
 
 
@@ -31,6 +45,9 @@ class Alphabet extends Component{
             const nextPosition = this.state.position + 1
             return  (
                 <View>
+                    <Image
+                    source={this.props.dinosours[this.state.position].image}
+                     />
                     <Text>Name: {this.props.dinosours[this.state.position].name} </Text>
                     <Button states={{title: this.props.dinosours[nextPosition].alphabet.toString() ,onPress: this.nextButtonPress.bind(this)}} />
                 </View>

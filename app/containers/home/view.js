@@ -19,9 +19,6 @@ class Home extends Component{
         return ( 
             <View style = { styles.about } >
                 <Text>Hello World</Text>
-                <Image
-                    source={require('../../assests/images/dinosour.jpg')}
-                />
                 <Button states={{title: 'Start' ,onPress: this.startButtonPress.bind(this)}} />
             </View>
         )
