@@ -4,58 +4,51 @@ import { connect } from 'react-redux'
 import styles from './style'
 import  Button  from '../../components/button/view'
 import Carousel from 'react-native-snap-carousel';
-
-
+import SliderEntry from '../../components/sliderentry/view';
+import { sliderWidth, itemWidth } from '../../components/sliderentry/style';
+import { colors } from '../../components/sliderentry/index.style';
 const {
     View,
     Text,
     Image,
     Dimensions,
+    Platform,
 } = ReactNative
+const IS_ANDROID = Platform.OS === 'android';
+const SLIDER_1_FIRST_ITEM = 0;
 
 export const ENTRIES1 = [
     {
         title: 'Beautiful and dramatic Antelope Canyon',
         subtitle: 'Lorem ipsum dolor sit amet et nuncat mergitur',
-        illustration: 'https://i.imgur.com/UYiroysl.jpg'
+        illustration: require('../../assests/images/dinosour.jpg'),
     },
     {
         title: 'Earlier this morning, NYC',
         subtitle: 'Lorem ipsum dolor sit amet',
-        illustration: 'https://i.imgur.com/UPrs1EWl.jpg'
+        illustration: require('../../assests/images/dinosour.jpg')
     },
     {
         title: 'White Pocket Sunset',
         subtitle: 'Lorem ipsum dolor sit amet et nuncat ',
-        illustration: 'https://i.imgur.com/MABUbpDl.jpg'
+        illustration: require('../../assests/images/dinosour.jpg')
     },
     {
         title: 'Acrocorinth, Greece',
         subtitle: 'Lorem ipsum dolor sit amet et nuncat mergitur',
-        illustration: 'https://i.imgur.com/KZsmUi2l.jpg'
+        illustration: require('../../assests/images/dinosour.jpg')
     },
     {
         title: 'The lone tree, majestic landscape of New Zealand',
         subtitle: 'Lorem ipsum dolor sit amet',
-        illustration: 'https://i.imgur.com/2nCt3Sbl.jpg'
+        illustration: require('../../assests/images/dinosour.jpg')
     },
     {
         title: 'Middle Earth, Germany',
         subtitle: 'Lorem ipsum dolor sit amet',
-        illustration: 'https://i.imgur.com/lceHsT6l.jpg'
+        illustration: require('../../assests/images/dinosour.jpg')
     }
 ];
-
-const { width: viewportWidth, height: viewportHeight } = Dimensions.get('window');
-function wp (percentage) {
-    const value = (percentage * viewportWidth) / 100;
-    return Math.round(value);
-}
-const itemHorizontalMargin = wp(2);
-const slideWidth = wp(75);
-export const sliderWidth = viewportWidth;
-export const itemWidth = slideWidth + itemHorizontalMargin * 2;
-
 
 class Alphabet extends Component{
 
@@ -87,11 +80,14 @@ class Alphabet extends Component{
     }
 
 
-    _renderItem ({item, index}) {
+    _renderItemWithParallax ({item, index}, parallaxProps) {
         return (
-            <View style={{backgroundColor: 'blue'}}>
-                <Text style={styles.title}>{ item.title }</Text>
-            </View>
+            <SliderEntry
+              data={item}
+              even={(index + 1) % 2 === 0}
+              parallax={true}
+              parallaxProps={parallaxProps}
+            />
         );
     }
 
@@ -100,19 +96,21 @@ class Alphabet extends Component{
             const nextPosition = this.state.position + 1
             return  (
                 <View>
-                    <Image
-                    source={this.props.dinosours[this.state.position].image}
-                     />
                     <Text>Name: {this.props.dinosours[this.state.position].name} </Text>
                     <Button states={{title: this.props.dinosours[nextPosition].alphabet.toString() ,onPress: this.nextButtonPress.bind(this)}} />
-                    <Carousel
-                        layout={'default'} 
-                        ref={(c) => { this._carousel = c; }}
-                        data={ENTRIES1}
-                        renderItem={this._renderItem}
-                        sliderWidth={sliderWidth}
-                        itemWidth={itemWidth}
-                    />
+                <Carousel
+                  ref={c => this._slider1Ref = c}
+                  data={ENTRIES1}
+                  renderItem={this._renderItemWithParallax}
+                  sliderWidth={sliderWidth}
+                  itemWidth={itemWidth}
+                  hasParallaxImages={true}
+                  firstItem={SLIDER_1_FIRST_ITEM}
+                  inactiveSlideScale={0.94}
+                  inactiveSlideOpacity={0.7}
+                  containerCustomStyle={styles.slider}
+                  contentContainerCustomStyle={styles.sliderContentContainer}
+/>
                 </View>
            )
         }
