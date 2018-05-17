@@ -10,6 +10,9 @@ const {
 } = ReactNative
 
 class Home extends Component{
+    componentDidMount(){
+        this.props.screenProps.fetchDinosours()
+    }
     startButtonPress(){
         this.props.navigation.navigate('Alphabet')
         
