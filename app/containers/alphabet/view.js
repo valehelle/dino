@@ -5,7 +5,7 @@ import styles from './style'
 import  Button  from '../../components/button/view'
 import Carousel from 'react-native-snap-carousel';
 import { sliderWidth, itemWidth } from './style';
-
+import { DINO_CARD_COLORS } from '../../helpers/colors'
 const {
     View,
     Text,
@@ -31,7 +31,7 @@ class Alphabet extends Component{
 
     _renderItem ({item, index}) {
         return (
-            <View style={styles.card}>
+            <View style={[styles.card, {backgroundColor: DINO_CARD_COLORS[index]} ]}>
                 <Text style={styles.alphabet}>{ item.alphabet }</Text>
 
                 <TouchableHighlight onPress={() => this.imagePress(index)}>

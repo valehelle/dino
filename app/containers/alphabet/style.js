@@ -23,7 +23,6 @@ export default StyleSheet.create({
         paddingTop: 20,
     },
     card: {
-        backgroundColor: '#03A9F4',
         borderColor: '#e1e8ee',
         borderWidth: 1,
         marginBottom: 0,
@@ -38,7 +37,7 @@ export default StyleSheet.create({
                 elevation: 1,
             },
         }),
-        height: slideHeight,
+    
         alignItems: 'center',
         paddingTop: 10,
 
@@ -58,7 +57,7 @@ export default StyleSheet.create({
     pronunciation: {
      textAlign: 'center',
      marginBottom: 20,
-     fontSize: 30,
+     fontSize: 20,
      color: 'white',
     },
     image: {
