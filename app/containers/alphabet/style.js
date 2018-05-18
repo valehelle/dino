@@ -14,13 +14,12 @@ const itemHorizontalMargin = wp(2);
 
 export const sliderWidth = viewportWidth;
 export const itemWidth = slideWidth + itemHorizontalMargin * 2;
-export const itemHeight = viewportWidth;
+
 
 
 
 export default StyleSheet.create({
     container: {
-        paddingTop: 20,
     },
     card: {
         borderColor: '#e1e8ee',
@@ -39,12 +38,12 @@ export default StyleSheet.create({
         }),
     
         alignItems: 'center',
-        paddingTop: 10,
+        height: 420,
 
     },
     alphabet: {
      textAlign: 'center',
-     marginBottom: 15,
+     marginBottom: 5,
      fontSize: 50,
      color: 'white',
      textShadowColor: 'rgba(0, 0, 0, 0.3)',
@@ -70,10 +69,34 @@ export default StyleSheet.create({
      textShadowRadius: 4,
      textShadowOffset:{width: 4, height:4}
     },
+    cardBack: {
+     alignItems: 'center',
+     justifyContent: 'center',
+     padding:10,
+     height: 420,
+    },
+    info: {
+     textAlign: 'justify',
+     justifyContent: 'center',
+     color: 'white',
+     fontSize: 20,
+     
+    },
     image: {
         backgroundColor:'red',
         height: 200,
         width: 200,
         marginBottom: 10,
     },
+    moreInfo: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        paddingBottom: 20,
+        position: 'absolute',
+        bottom: 0
+    },
+    flipText: {
+        color: 'white',
+        fontSize: 15,
+    }
 })
