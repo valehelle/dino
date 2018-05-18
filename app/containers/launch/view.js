@@ -15,10 +15,8 @@ class Launch extends Component{
 
     render(){
         return (
-            <View>
-                <Text>launch container</Text>
-                <Text>launch container</Text>
-                <Text>launch container</Text>
+            <View style = { styles.container }>
+                <Text style = { styles.icon } >launch container</Text>
             </View>
         )
     }

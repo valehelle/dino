@@ -15,7 +15,9 @@ export const HomeStack = StackNavigator({
         screen: Screen.home,
         navigationOptions:{
             title: 'Home',
-        }
+            header: null
+        },
+       
     },
     Alphabet:{
         screen: Screen.alphabet,

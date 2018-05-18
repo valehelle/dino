@@ -64,5 +64,6 @@ export default StyleSheet.create({
         backgroundColor:'red',
         height: 200,
         width: 200,
+        marginBottom: 10,
     },
 })

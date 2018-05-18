@@ -20,9 +20,13 @@ class Home extends Component{
     render(){
 
         return ( 
-            <View style = { styles.about } >
-                <Text>Hello World</Text>
-                <Button states={{title: 'Start' ,onPress: this.startButtonPress.bind(this)}} />
+            <View style = { styles.container } >
+                <View style = { styles.titleContainer }>
+                <Text style = { styles.title }>Dino Flash Card</Text>
+                </View>
+                <View style = { styles.startContainer }>
+                <Button style = { styles.startButton } states={{title: 'Start' ,onPress: this.startButtonPress.bind(this)}} />
+                </View>
             </View>
         )
     }

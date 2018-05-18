@@ -32,7 +32,7 @@ class Alphabet extends Component{
     _renderItem ({item, index}) {
         return (
             <View style={[styles.card, {backgroundColor: DINO_CARD_COLORS[index]} ]}>
-                <Text style={styles.alphabet}>{ item.alphabet }</Text>
+                <Text style={styles.alphabet}>{ item.name.charAt(0).toUpperCase() }{ item.name.charAt(0).toLowerCase() }</Text>
 
                 <TouchableHighlight onPress={() => this.imagePress(index)}>
                 <Image
@@ -60,6 +60,8 @@ class Alphabet extends Component{
                     firstItem={ 0 }
                     inactiveSlideScale={0.94}
                     inactiveSlideOpacity={0.7}
+                    enableMomentum = {true}
+                    
                 />
             </View>
            )
