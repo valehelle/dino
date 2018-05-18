@@ -13,8 +13,7 @@ const {
     Platform,
     TouchableHighlight,
 } = ReactNative
-const IS_ANDROID = Platform.OS === 'android';
-
+var sound
 
 class Alphabet extends Component{
 
@@ -24,8 +23,14 @@ class Alphabet extends Component{
     
 
     imagePress(position){
-        let sound = this.props.dinosours[position].sound
+        sound = this.props.dinosours[position].sound
         sound.play()
+    }
+
+    userScroll(){
+        if (sound != undefined){
+            sound.stop()
+        }
     }
 
 
@@ -61,7 +66,7 @@ class Alphabet extends Component{
                     inactiveSlideScale={0.94}
                     inactiveSlideOpacity={0.7}
                     enableMomentum = {true}
-                    
+                    onScroll = {this.userScroll.bind(this)}
                 />
             </View>
            )

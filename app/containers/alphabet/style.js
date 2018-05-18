@@ -44,21 +44,31 @@ export default StyleSheet.create({
     },
     alphabet: {
      textAlign: 'center',
-     marginBottom: 20,
+     marginBottom: 15,
      fontSize: 50,
      color: 'white',
+     textShadowColor: 'rgba(0, 0, 0, 0.3)',
+     textShadowRadius: 4,
+     textShadowOffset:{width: 4, height:4},
+     paddingBottom :5,
     },
     name: {
      textAlign: 'center',
      marginBottom: 20,
      fontSize: 30,
      color: 'white',
+          textShadowColor: 'rgba(0, 0, 0, 0.3)',
+     textShadowRadius: 4,
+     textShadowOffset:{width: 4, height:4}
     },
     pronunciation: {
      textAlign: 'center',
      marginBottom: 20,
      fontSize: 20,
      color: 'white',
+          textShadowColor: 'rgba(0, 0, 0, 0.3)',
+     textShadowRadius: 4,
+     textShadowOffset:{width: 4, height:4}
     },
     image: {
         backgroundColor:'red',
