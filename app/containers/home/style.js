@@ -17,4 +17,8 @@ export default StyleSheet.create({
     startButton: {
 
     },
+    background:{
+        width: '100%',
+        height: '100%'
+    }
 })

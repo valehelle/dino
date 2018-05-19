@@ -20,10 +20,12 @@ export const itemWidth = slideWidth + itemHorizontalMargin * 2;
 
 export default StyleSheet.create({
     container: {
+        height: '100%',
+        backgroundColor : 'white'
     },
     card: {
         borderColor: '#e1e8ee',
-        borderWidth: 1,
+        borderRadius: 20,
         marginBottom: 0,
         ...Platform.select({
             ios: {
@@ -74,6 +76,7 @@ export default StyleSheet.create({
      justifyContent: 'center',
      padding:10,
      height: 420,
+     borderRadius: 20,
     },
     info: {
      textAlign: 'justify',
@@ -83,10 +86,10 @@ export default StyleSheet.create({
      
     },
     image: {
-        backgroundColor:'red',
         height: 200,
-        width: 200,
+        width: 300,
         marginBottom: 10,
+        resizeMode: 'contain',
     },
     moreInfo: {
         justifyContent: 'center',
@@ -98,5 +101,15 @@ export default StyleSheet.create({
     flipText: {
         color: 'white',
         fontSize: 15,
+    },
+    backButton:{
+        marginTop: 40,
+        marginLeft: 30,
+    },
+    background:{
+        height: '100%',
+        width: '100%',
+        resizeMode: 'cover',
+        
     }
 })

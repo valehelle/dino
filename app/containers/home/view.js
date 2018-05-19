@@ -6,7 +6,8 @@ import  Button  from '../../components/button/view'
 const {
     View,
     Text,
-    Image
+    Image,
+    ImageBackground
 } = ReactNative
 
 class Home extends Component{
@@ -20,7 +21,9 @@ class Home extends Component{
     render(){
 
         return ( 
+            <ImageBackground style={styles.background} source = {require('../../assests/images/background.jpg')}>
             <View style = { styles.container } >
+                
                 <View style = { styles.titleContainer }>
                 <Text style = { styles.title }>Dino Flash Card</Text>
                 </View>
@@ -28,6 +31,7 @@ class Home extends Component{
                 <Button style = { styles.startButton } states={{title: 'Start' ,onPress: this.startButtonPress.bind(this)}} />
                 </View>
             </View>
+            </ImageBackground>
         )
     }
 }

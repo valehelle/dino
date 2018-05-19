@@ -11,9 +11,8 @@ const {
     View,
     Text,
     Image,
-    Platform,
-    TouchableHighlight,
     TouchableWithoutFeedback,
+    ImageBackground,
 } = ReactNative
 var sound
 
@@ -29,6 +28,10 @@ class Alphabet extends Component{
         sound.play()
     }
 
+    backButtonPressed(){
+         this.props.navigation.goBack()
+    }
+
     userScroll(){
         if (sound != undefined){
             sound.stop()
@@ -42,13 +45,13 @@ class Alphabet extends Component{
 
                     <View style={[styles.card, {backgroundColor: DINO_CARD_COLORS[index]} ]}>
                         <Text style={styles.alphabet}>{ item.name.charAt(0).toUpperCase() }{ item.name.charAt(0).toLowerCase() }</Text>
-                        <TouchableHighlight onPress={() => this['card' + index].flip()}>
+                        <TouchableWithoutFeedback onPress={() => this.imagePress(index)}>
                         <Image
                             source={ item.image }
                             style = { styles.image }
                             
                             />                
-                        </TouchableHighlight>
+                        </TouchableWithoutFeedback>
                         <Text style={styles.name}>{ item.name }</Text>
                         <Text style={styles.pronunciation}>{ item.pronunciation }</Text>
                         <TouchableWithoutFeedback onPress={() => this['card' + index].flip()}>
@@ -58,8 +61,8 @@ class Alphabet extends Component{
                         </TouchableWithoutFeedback>
                     </View>
 
-                    <View style={[styles.cardBack, {backgroundColor: DINO_CARD_COLORS[index]} ]}>
-                        <Text style={styles.info}>One of the largest armoured dinosaurus, Ankylosaurus had a wide, heavily armoured skull and a large tail club. It had a large gut space for digesting plant material.</Text>
+                    <View style={[styles.cardBack, {backgroundColor: 'grey'} ]}>
+                        <Text style={styles.info}>{ item.description }</Text>
                         <TouchableWithoutFeedback onPress={() => this['card' + index].flip()}>
                             <View style = {styles.moreInfo} >
                                 <Text style = {styles.flipText} >Back</Text>
@@ -74,19 +77,26 @@ class Alphabet extends Component{
         if(this.props.dinosours != undefined ){
             return  (
                 <View style = {styles.container}>
-                    <Carousel
-                    ref={(c) => { this._carousel = c; }}
-                    data={ this.props.dinosours }
-                    renderItem={this._renderItem.bind(this)}
-                    sliderWidth={sliderWidth}
-                    itemWidth={itemWidth}
-                    firstItem={ 0 }
-                    inactiveSlideScale={0.94}
-                    inactiveSlideOpacity={0.7}
-                    enableMomentum = {true}
-                    onScroll = {this.userScroll.bind(this)}
-                    containerCustomStyle = {{paddingTop: 50, paddingBottom: 50}}
-                />
+                    <ImageBackground style={styles.background} source = {require('../../assests/images/background2.png')}>
+                        <View style = {styles.backButton}>
+                            <TouchableWithoutFeedback  onPress={() => this.backButtonPressed()}>
+                                <Text>Back</Text>
+                            </TouchableWithoutFeedback>
+                        </View>
+                        <Carousel
+                        ref={(c) => { this._carousel = c; }}
+                        data={ this.props.dinosours }
+                        renderItem={this._renderItem.bind(this)}
+                        sliderWidth={sliderWidth}
+                        itemWidth={itemWidth}
+                        firstItem={ 0 }
+                        inactiveSlideScale={0.94}
+                        inactiveSlideOpacity={0.7}
+                        enableMomentum = {true}
+                        onScroll = {this.userScroll.bind(this)}
+                        containerCustomStyle = {{paddingTop: 30, paddingBottom: 60}}
+                    />
+                </ImageBackground>
             </View>
            )
         }

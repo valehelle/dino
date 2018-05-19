@@ -15,7 +15,6 @@ export const HomeStack = StackNavigator({
         screen: Screen.home,
         navigationOptions:{
             title: 'Home',
-            header: null
         },
        
     },
@@ -25,6 +24,8 @@ export const HomeStack = StackNavigator({
             title: 'Alphabet',
         }
     },   
+},{
+    headerMode: 'none',
 })
 
 export const LaunchStack = StackNavigator({

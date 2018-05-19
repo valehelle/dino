@@ -35,6 +35,7 @@
 		2D02E4C91E0B4AEC006451C7 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
 		2DCD954D1E0B4F2C00145EB5 /* dinoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* dinoTests.m */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
+		804BA62B20B06F3B0077B238 /* a.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 804BA60420B06F3B0077B238 /* a.m4a */; };
 		80B0A84020A7E501006EE8E3 /* SampleAudio_0.4mb.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 80B0A83F20A7E501006EE8E3 /* SampleAudio_0.4mb.mp3 */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		A05B128B58CE431494B9D3D5 /* libRNSound.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3099F9A756D545B1828A02A5 /* libRNSound.a */; };
@@ -349,6 +350,7 @@
 		3099F9A756D545B1828A02A5 /* libRNSound.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNSound.a; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
+		804BA60420B06F3B0077B238 /* a.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = a.m4a; path = ../../../../Desktop/a.m4a; sourceTree = "<group>"; };
 		80B0A83F20A7E501006EE8E3 /* SampleAudio_0.4mb.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = SampleAudio_0.4mb.mp3; path = ../../../../Downloads/SampleAudio_0.4mb.mp3; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
@@ -564,6 +566,7 @@
 		80B0A83E20A7E4E3006EE8E3 /* Sound */ = {
 			isa = PBXGroup;
 			children = (
+				804BA60420B06F3B0077B238 /* a.m4a */,
 				80B0A83F20A7E501006EE8E3 /* SampleAudio_0.4mb.mp3 */,
 			);
 			name = Sound;
@@ -1093,6 +1096,7 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				804BA62B20B06F3B0077B238 /* a.m4a in Resources */,
 				80B0A84020A7E501006EE8E3 /* SampleAudio_0.4mb.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,18 +7,20 @@ export function dinosourList(){
                 'name':'Anklosaurus',
                 'alphabet': 'A',
                 'sound': 'sound.mp3',
-                'image': require('../assests/images/dinosour.jpg'),
+                'image': require('../assests/images/ankylosaurus1.png'),
                 'pronunciation': 'an-KIE-loh-sore-us',
-                'sound': initSound('SampleAudio_0.4mb.mp3'),
+                'sound': initSound('a.m4a'),
+                'description': 'One of the largest armoured dinosaurus, Ankylosaurus had a wide, heavily armoured skull and a large tail club. It had a large gut space for digesting plant material.'
             },
             {
                 'id':2,
                 'name':'Brachiosaurus',
                 'alphabet': 'B',
                 'sound': 'sound.mp3',
-                'image': require('../assests/images/dinosour2.jpg'),
+                'image': require('../assests/images/ankylosaurus2.png'),
                 'pronunciation': 'BRAK-ee-oh-sore-us',
-                'sound': initSound('SampleAudio_0.4mb.mp3'),
+                'sound': initSound('a.m4a'),
+                'description': 'Brachiosaurus held its head very high. It is likely to have eaten the leaves on tall tree-like plants.'
             },
             {
                 'id':3,
@@ -28,6 +30,7 @@ export function dinosourList(){
                 'image': require('../assests/images/dinosour.jpg'),
                 'pronunciation': 'kon-few-shus-or-niss',
                 'sound': initSound('SampleAudio_0.4mb.mp3'),
+                'description': 'It is the oldest known bird to have a beak.It was named after the Chinese moral philosopher Confucius (551–479 BC). Confuciusornis is one of the most abundant vertebrates found in the Yixian Formation'
             },
             {
                 'id':4,
@@ -37,6 +40,7 @@ export function dinosourList(){
                 'image': require('../assests/images/dinosour.jpg'),
                 'pronunciation': 'dah-sen-troo-russ',
                 'sound': initSound('SampleAudio_0.4mb.mp3'),
+                'description': 'Although Dacentrurus is considered to have the same proportions as Stegosaurus, its plate and spike configuration is known to be rather different, as it probably had both two rows of small plates on its neck and two rows of longer spikes along its tail.'
             },
             {
                 'id':5,
@@ -46,6 +50,7 @@ export function dinosourList(){
                 'image': require('../assests/images/dinosour2.jpg'),
                 'pronunciation': 'ie-nee-oh-sore-us',
                 'sound': initSound('SampleAudio_0.4mb.mp3'),
+                'description': 'The nasal horn of Einiosaurus is quite unusual in that it curves forward to point towards the ground,‭ ‬something which is reflected in the species name E.‭ ‬procurvicornis which translates to English as‭ "forward curving horn‭".‭ '
             },
             {
                 'id':6,
@@ -55,6 +60,7 @@ export function dinosourList(){
                 'image': require('../assests/images/dinosour.jpg'),
                 'pronunciation': 'foo-koo-I-sore-us',
                 'sound': initSound('SampleAudio_0.4mb.mp3'),
+                'description': 'Fukuisaurus is only known from a skull, so the rest of the reconstruction is guesswork based on similar dinosaurs.',
             },    
             {
                 'id':7,
@@ -64,6 +70,7 @@ export function dinosourList(){
                 'image': require('../assests/images/dinosour.jpg'),
                 'pronunciation': 'gras-i-li-serra-tops',
                 'sound': initSound('SampleAudio_0.4mb.mp3'),
+                'description': 'Like other ceratopsians, Graciliceratops would have been an herbivore, using its powerful beak and shearing teeth to process tough plant matter. Little is known about the flora of the ancient Gobi Desert, and so it is unclear what it would have eaten.',
             },
             {
                 'id':8,
@@ -73,6 +80,7 @@ export function dinosourList(){
                 'image': require('../assests/images/dinosour2.jpg'),
                 'pronunciation': 'ha-grif-us',
                 'sound': initSound('SampleAudio_0.4mb.mp3'),
+                'description': 'Hagryphus is known from only a left hand, fragmentary metatarsals and pedal phalanges (part of a foot), so this reconstruction is based on these and Chirostenotes, a very similar dinosaur.',
             },
             {
                 'id':9,
@@ -82,6 +90,7 @@ export function dinosourList(){
                 'image': require('../assests/images/dinosour.jpg'),
                 'pronunciation': 'irr-it-ate-or',
                 'sound': initSound('SampleAudio_0.4mb.mp3'),
+                'description': 'Irritator was quite like Spinosaurus. It is known only from a skull, so the sail is a guess.',
             },    
             {
                 'id':10,
@@ -91,6 +100,7 @@ export function dinosourList(){
                 'image': require('../assests/images/dinosour.jpg'),
                 'pronunciation': 'jak-sahr-toh-sore-us',
                 'sound': initSound('SampleAudio_0.4mb.mp3'),
+                'description': '',
             },
             {
                 'id':11,
@@ -100,6 +110,7 @@ export function dinosourList(){
                 'image': require('../assests/images/dinosour2.jpg'),
                 'pronunciation': 'ken-TROH-sore-us',
                 'sound': initSound('SampleAudio_0.4mb.mp3'),
+                'description': '',
             },
             {
                 'id':12,
@@ -109,6 +120,7 @@ export function dinosourList(){
                 'image': require('../assests/images/dinosour.jpg'),
                 'pronunciation': 'lam-BEE-oh-SORE-us',
                 'sound': initSound('SampleAudio_0.4mb.mp3'),
+                'description': '',
             },    
             {
                 'id':13,
@@ -118,6 +130,7 @@ export function dinosourList(){
                 'image': require('../assests/images/dinosour.jpg'),
                 'pronunciation': 'my-ah-SORE-ah',
                 'sound': initSound('SampleAudio_0.4mb.mp3'),
+                'description': '',
             },
             {
                 'id':14,
@@ -127,6 +140,7 @@ export function dinosourList(){
                 'image': require('../assests/images/dinosour2.jpg'),
                 'pronunciation': 'no-doh-SORE-us',
                 'sound': initSound('SampleAudio_0.4mb.mp3'),
+                'description': '',
             },
             {
                 'id':15,
@@ -136,6 +150,7 @@ export function dinosourList(){
                 'image': require('../assests/images/dinosour.jpg'),
                 'pronunciation': 'or-oh-DROM-ee-us',
                 'sound': initSound('SampleAudio_0.4mb.mp3'),
+                'description': '',
             },
             {
                 'id':16,
@@ -145,6 +160,7 @@ export function dinosourList(){
                 'image': require('../assests/images/dinosour.jpg'),
                 'pronunciation': 'pa-ra-saw-ROL-off-us',
                 'sound': initSound('SampleAudio_0.4mb.mp3'),
+                'description': '',
             },
             {
                 'id':17,
@@ -154,6 +170,7 @@ export function dinosourList(){
                 'image': require('../assests/images/dinosour2.jpg'),
                 'pronunciation': 'kwee-siet-oh-sore-us',
                 'sound': initSound('SampleAudio_0.4mb.mp3'),
+                'description': '',
             },
             {
                 'id':18,
@@ -163,6 +180,7 @@ export function dinosourList(){
                 'image': require('../assests/images/dinosour.jpg'),
                 'pronunciation': 'rin-chen-ee-ah',
                 'sound': initSound('SampleAudio_0.4mb.mp3'),
+                'description': '',
             },
             {
                 'id':19,
@@ -172,6 +190,7 @@ export function dinosourList(){
                 'image': require('../assests/images/dinosour.jpg'),
                 'pronunciation': 'STEG-oh-SORE-us',
                 'sound': initSound('SampleAudio_0.4mb.mp3'),
+                'description': '',
             },
             {
                 'id':20,
@@ -181,6 +200,7 @@ export function dinosourList(){
                 'image': require('../assests/images/dinosour2.jpg'),
                 'pronunciation': 'tie-RAN-oh-sore-us',
                 'sound': initSound('SampleAudio_0.4mb.mp3'),
+                'description': '',
             },
             {
                 'id':21,
@@ -190,6 +210,7 @@ export function dinosourList(){
                 'image': require('../assests/images/dinosour.jpg'),
                 'pronunciation': 'urb-ah-ko-don',
                 'sound': initSound('SampleAudio_0.4mb.mp3'),
+                'description': '',
             },    
             {
                 'id':22,
@@ -199,6 +220,7 @@ export function dinosourList(){
                 'image': require('../assests/images/dinosour.jpg'),
                 'pronunciation': 'vel-OSS-ee-rap-tor',
                 'sound': initSound('SampleAudio_0.4mb.mp3'),
+                'description': '',
             },
             {
                 'id':23,
@@ -208,6 +230,7 @@ export function dinosourList(){
                 'image': require('../assests/images/dinosour2.jpg'),
                 'pronunciation': 'woo-uhr-huh-sore-us',
                 'sound': initSound('SampleAudio_0.4mb.mp3'),
+                'description': '',
             },
             {
                 'id':24,
@@ -226,6 +249,7 @@ export function dinosourList(){
                 'image': require('../assests/images/dinosour.jpg'),
                 'pronunciation': 'yin-long',
                 'sound': initSound('SampleAudio_0.4mb.mp3'),
+                'description': '',
             }, 
             {
                 'id':26,
@@ -235,6 +259,7 @@ export function dinosourList(){
                 'image': require('../assests/images/dinosour.jpg'),
                 'pronunciation': 'zal-moks-eez',
                 'sound': initSound('SampleAudio_0.4mb.mp3'),
+                'description': '',
             },              
             ]
 
