@@ -26,6 +26,7 @@ class Speech extends Component{
     
   onSpeechResults(e) {
     alert('onSpeechResults' + e.value);
+    this._endSpeech();
 }
 
     imagePress(position){
