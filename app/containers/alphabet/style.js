@@ -24,7 +24,7 @@ export default StyleSheet.create({
         backgroundColor : 'white'
     },
     card: {
-        backgroundColor: 'rgba(255,255,255, .7)',
+        backgroundColor: 'rgba(255,255,255, .4)',
         borderRadius: 20,
         marginBottom: 0,
 

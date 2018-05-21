@@ -25,9 +25,7 @@ class Speech extends Component{
   }
     
   onSpeechResults(e) {
-    alert(e.value);
-    Voice.stop();
-
+    alert('onSpeechResults' + e.value);
 }
 
     imagePress(position){
@@ -35,66 +33,30 @@ class Speech extends Component{
         sound.play()
     }
 
-    startSpeech(){
-         Voice.start();
+  async _startSpeech() {
+    try {
+      await Voice.start('en-US');
+    } catch (e) {
+
     }
-    endSpeech(){
-         Voice.stop();
+}
+
+  async _endSpeech(e) {
+    alert('end');
+    try {
+      await Voice.stop();
+    } catch (e) {
+      console.error(e);
     }
-    userScroll(){
-        if (sound != undefined){
-            sound.stop()
-        }
-    }
-
-
-    _renderItem ({item, index}) {
-        return (
-              <CardFlip style={{height: 400}} ref={ (card) => this['card' + index] = card } >
-
-                    <View style={[styles.card ]}>
-                        <Text style={styles.alphabet}>{ item.name.charAt(0).toUpperCase() }{ item.name.charAt(0).toLowerCase() }</Text>
-                        <TouchableWithoutFeedback onPress={() => this.imagePress(index)}>
-                        <Image
-                            source={ item.image }
-                            style = { styles.image }
-                            
-                            />                
-                        </TouchableWithoutFeedback>
-                        <Text style={styles.name}>{ item.name }</Text>
-                        <Text style={styles.pronunciation}>{ item.pronunciation }</Text>
-                        <TouchableWithoutFeedback onPress={() => this['card' + index].flip()}>
-                            <View style = {styles.moreInfo} >
-                                <Text style = {styles.flipText} >More Info</Text>
-                            </View>
-                        </TouchableWithoutFeedback>
-                    </View>
-
-                    <View style={[styles.cardBack, {backgroundColor: 'grey'} ]}>
-                        <Text style={styles.info}>{ item.description }</Text>
-                        <TouchableWithoutFeedback onPress={() => this['card' + index].flip()}>
-                            <View style = {styles.moreInfo} >
-                                <Text style = {styles.flipText} >Back</Text>
-                            </View>
-                        </TouchableWithoutFeedback>
-                </View>
-            </CardFlip>
-        );
-    }
-
+}
 
 
     render(){
         return (
             <View style = {{flex: 1, backgroundColor: 'red'}}>
-                    <TouchableWithoutFeedback onPress={() => this.startSpeech()}>
+                    <TouchableWithoutFeedback onPressIn={this._startSpeech.bind(this)} onPressOut={this._endSpeech.bind(this)}>
                                 <View style = {{flex:1, backgroundColor: 'blue'}} >
                                     <Text style = {styles.flipText} >start</Text>
-                                </View>
-                    </TouchableWithoutFeedback>
-                    <TouchableWithoutFeedback onPress={() => this.endSpeech()}>
-                                <View style = {{flex:1, backgroundColor: 'blue'}} >
-                                    <Text style = {styles.flipText} >end</Text>
                                 </View>
                     </TouchableWithoutFeedback>
             </View>
