@@ -12,6 +12,7 @@
     "react-native-card-flip": "^1.0.3",
     "react-native-snap-carousel": "3.7.0",
     "react-native-sound": "0.10.9",
+    "react-native-voice": "^0.2.6",
     "react-navigation": "git+https://github.com/react-community/react-navigation.git",
     "react-redux": "5.0.6",
     "redux": "3.7.2",

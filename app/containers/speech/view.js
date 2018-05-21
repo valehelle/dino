@@ -7,6 +7,7 @@ import Carousel from 'react-native-snap-carousel';
 import { sliderWidth, itemWidth } from './style';
 import { DINO_CARD_COLORS } from '../../helpers/colors'
 import CardFlip from 'react-native-card-flip';
+import Voice from 'react-native-voice';
 const {
     View,
     Text,
@@ -16,22 +17,30 @@ const {
 } = ReactNative
 var sound
 
-class Alphabet extends Component{
+class Speech extends Component{
 
   constructor(props) {
     super(props);
+    Voice.onSpeechResults = this.onSpeechResults.bind(this);
   }
     
+  onSpeechResults(e) {
+    alert(e.value);
+    Voice.stop();
+
+}
 
     imagePress(position){
         sound = this.props.dinosours[position].sound
         sound.play()
     }
 
-    backButtonPressed(){
-         this.props.navigation.goBack()
+    startSpeech(){
+         Voice.start();
     }
-
+    endSpeech(){
+         Voice.stop();
+    }
     userScroll(){
         if (sound != undefined){
             sound.stop()
@@ -73,39 +82,21 @@ class Alphabet extends Component{
         );
     }
 
-    _renderDinosour(){
-        if(this.props.dinosours != undefined ){
-            return  (
-                <View style = {styles.container}>
-                    <ImageBackground style={styles.background} source = {require('../../assests/images/background2.png')}>
-                        <View style = {styles.backButton}>
-                            <TouchableWithoutFeedback  onPress={() => this.backButtonPressed()}>
-                                <Text>Back</Text>
-                            </TouchableWithoutFeedback>
-                        </View>
-                        <Carousel
-                        ref={(c) => { this._carousel = c; }}
-                        data={ this.props.dinosours }
-                        renderItem={this._renderItem.bind(this)}
-                        sliderWidth={sliderWidth}
-                        itemWidth={itemWidth}
-                        firstItem={ 0 }
-                        inactiveSlideScale={0.94}
-                        inactiveSlideOpacity={0.7}
-                        enableMomentum = {true}
-                        onScroll = {this.userScroll.bind(this)}
-                        containerCustomStyle = {{paddingTop: 30, paddingBottom: 60}}
-                    />
-                </ImageBackground>
-            </View>
-           )
-        }
-    }
+
 
     render(){
         return (
-            <View>
-                {this._renderDinosour()}
+            <View style = {{flex: 1, backgroundColor: 'red'}}>
+                    <TouchableWithoutFeedback onPress={() => this.startSpeech()}>
+                                <View style = {{flex:1, backgroundColor: 'blue'}} >
+                                    <Text style = {styles.flipText} >start</Text>
+                                </View>
+                    </TouchableWithoutFeedback>
+                    <TouchableWithoutFeedback onPress={() => this.endSpeech()}>
+                                <View style = {{flex:1, backgroundColor: 'blue'}} >
+                                    <Text style = {styles.flipText} >end</Text>
+                                </View>
+                    </TouchableWithoutFeedback>
             </View>
         )
     }
@@ -115,4 +106,4 @@ class Alphabet extends Component{
         dinosours: state.dinosours.list
     }
 }
-export default connect(mapStateToProps)(Alphabet)
+export default connect(mapStateToProps)(Speech)

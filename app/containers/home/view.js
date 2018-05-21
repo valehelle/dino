@@ -18,6 +18,10 @@ class Home extends Component{
         this.props.navigation.navigate('Alphabet')
         
     }
+    speechButtonPress(){
+        this.props.navigation.navigate('Speech')
+        
+    }
     render(){
 
         return ( 
@@ -29,6 +33,8 @@ class Home extends Component{
                 </View>
                 <View style = { styles.startContainer }>
                 <Button style = { styles.startButton } states={{title: 'Start' ,onPress: this.startButtonPress.bind(this)}} />
+                <Button style = { styles.startButton } states={{title: 'Speech' ,onPress: this.speechButtonPress.bind(this)}} />
+                
                 </View>
             </View>
             </ImageBackground>

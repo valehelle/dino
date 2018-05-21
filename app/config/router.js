@@ -24,6 +24,12 @@ export const HomeStack = StackNavigator({
             title: 'Alphabet',
         }
     },   
+    Speech:{
+        screen: Screen.speech,
+        navigationOptions:{
+            title: 'Speech',
+        }
+    },  
 },{
     headerMode: 'none',
 })
