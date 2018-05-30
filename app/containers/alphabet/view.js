@@ -20,12 +20,16 @@ class Alphabet extends Component{
 
   constructor(props) {
     super(props);
+    this.state = {position: 0};
   }
     
 
     imagePress(position){
-        sound = this.props.dinosours[position].sound
+        sound = this.props.dinosours[this.state.position].sound
         sound.play()
+    }
+    newPosition(newPosition){
+        this.setState({position: newPosition})
     }
 
     backButtonPressed(){
@@ -37,39 +41,71 @@ class Alphabet extends Component{
             sound.stop()
         }
     }
+    flipCard(){
+        this['card' + this.state.position].flip()
+    }
+    _renderFlipFront(){
+        return(
+            <TouchableWithoutFeedback onPress={() => this.flipCard()} style = {styles.moreInfo}>
+                <View style = {styles.moreInfo} >
+                                <Image
+                                source={ require('../../assests/images/info.png') }
+                                style = { styles.backImage }
+                                />  
+                            </View>
+            </TouchableWithoutFeedback>
+        )
+    }
 
+    _renderFlipBack(){
+        if(true){
+            return(
+                <TouchableWithoutFeedback onPress={() => this.flipCard()} style = {styles.moreInfo}>
+                    <View style = {styles.moreInfo} >
+                                    <Image
+                                    source={ require('../../assests/images/info.png') }
+                                    style = { styles.backImage }
+                                    />  
+                                </View>
+                </TouchableWithoutFeedback>
+            )
+        }else{
+            return (<View></View>)
+        }
+    }
 
     _renderItem ({item, index}) {
         return (
-              <CardFlip style={{height: 400}} ref={ (card) => this['card' + index] = card } >
-
+            <View>
+              <CardFlip style={{height: 340}} ref={ (card) => this['card' + index] = card } >
                     <View style={[styles.card ]}>
                         <Text style={styles.alphabet}>{ item.name.charAt(0).toUpperCase() }{ item.name.charAt(0).toLowerCase() }</Text>
-                        <TouchableWithoutFeedback onPress={() => this.imagePress(index)}>
                         <Image
                             source={ item.image }
                             style = { styles.image }
                             
                             />                
-                        </TouchableWithoutFeedback>
                         <Text style={styles.name}>{ item.name }</Text>
-                        <Text style={styles.pronunciation}>{ item.pronunciation }</Text>
-                        <TouchableWithoutFeedback onPress={() => this['card' + index].flip()}>
-                            <View style = {styles.moreInfo} >
-                                <Text style = {styles.flipText} >More Info</Text>
-                            </View>
-                        </TouchableWithoutFeedback>
+                        {this._renderFlipBack()}
+
                     </View>
 
-                    <View style={[styles.cardBack, {backgroundColor: 'grey'} ]}>
+                    <View style={[styles.card ]}>
+                        <Image
+                            source={ item.image }
+                            style = { styles.image }
+                            
+                            />    
                         <Text style={styles.info}>{ item.description }</Text>
-                        <TouchableWithoutFeedback onPress={() => this['card' + index].flip()}>
-                            <View style = {styles.moreInfo} >
-                                <Text style = {styles.flipText} >Back</Text>
-                            </View>
-                        </TouchableWithoutFeedback>
-                </View>
+                        {this._renderFlipFront()}
+                    </View>
+
+
             </CardFlip>
+            <View style={[styles.pronounceCard ]}>
+                <Text style={styles.pronunciation}>{ item.pronunciation }</Text>
+            </View>
+            </View>
         );
     }
 
@@ -77,12 +113,6 @@ class Alphabet extends Component{
         if(this.props.dinosours != undefined ){
             return  (
                 <View style = {styles.container}>
-                    <ImageBackground style={styles.background} source = {require('../../assests/images/background2.png')}>
-                        <View style = {styles.backButton}>
-                            <TouchableWithoutFeedback  onPress={() => this.backButtonPressed()}>
-                                <Text>Back</Text>
-                            </TouchableWithoutFeedback>
-                        </View>
                         <Carousel
                         ref={(c) => { this._carousel = c; }}
                         data={ this.props.dinosours }
@@ -94,18 +124,53 @@ class Alphabet extends Component{
                         inactiveSlideOpacity={0.7}
                         enableMomentum = {true}
                         onScroll = {this.userScroll.bind(this)}
-                        containerCustomStyle = {{paddingTop: 30, paddingBottom: 60}}
+                        containerCustomStyle = {{paddingTop: 30, paddingBottom: 60,}}
+                        slideStyle= {{marginRight:10,}}
+                        onSnapToItem= {(index) => {this.newPosition(index)}}
                     />
-                </ImageBackground>
             </View>
            )
         }
     }
+    _renderBack(){
+        return(                        
+            <View style = {styles.backButton}>
+                <TouchableWithoutFeedback  onPress={() => this.backButtonPressed()}>
+                        <View style = {styles.backContainer}>
+                            <Image
+                            source={ require('../../assests/images/home.png') }
+                            style = { styles.backImage }
+                            />  
+                        </View>
+                </TouchableWithoutFeedback>
+            </View>
+                        )
+
+    }
+    _renderVoice(){
+        return(                        
+            <View style = {styles.voiceButton}>
+                <TouchableWithoutFeedback  onPress={() => this.imagePress(0)}>
+                        <View style = {styles.backContainer}>
+                            <Image
+                            source={ require('../../assests/images/voice.png') }
+                            style = { styles.voiceImage }
+                            />  
+                        </View>
+                </TouchableWithoutFeedback>
+            </View>
+                        )
+
+    }
 
     render(){
         return (
-            <View>
-                {this._renderDinosour()}
+            <View style = {styles.container}>
+                 <ImageBackground style={styles.background} source = {require('../../assests/images/background2.png')}>
+                    {this._renderBack()}
+                    {this._renderDinosour()}
+                    {this._renderVoice()}
+                </ImageBackground>
             </View>
         )
     }

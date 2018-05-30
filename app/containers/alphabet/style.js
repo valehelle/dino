@@ -20,17 +20,23 @@ export const itemWidth = slideWidth + itemHorizontalMargin * 2;
 
 export default StyleSheet.create({
     container: {
-        height: '100%',
-        backgroundColor : 'white'
+        flex:1,
     },
     card: {
         backgroundColor: 'rgba(255,255,255, .4)',
-        borderRadius: 20,
+        borderRadius: 10,
         marginBottom: 0,
-
-    
         alignItems: 'center',
-        height: 420,
+        height: 320,
+
+    },
+    pronounceCard: {
+        backgroundColor: 'rgba(255,255,255, .4)',
+        borderRadius: 10,
+        marginBottom: 0,
+        alignItems: 'center',
+        height: 40,
+        justifyContent: 'center',
 
     },
     alphabet: {
@@ -54,12 +60,8 @@ export default StyleSheet.create({
     },
     pronunciation: {
      textAlign: 'center',
-     marginBottom: 20,
      fontSize: 20,
      color: 'white',
-          textShadowColor: 'rgba(0, 0, 0, 0.3)',
-     textShadowRadius: 4,
-     textShadowOffset:{width: 4, height:4}
     },
     cardBack: {
      alignItems: 'center',
@@ -72,7 +74,8 @@ export default StyleSheet.create({
      textAlign: 'justify',
      justifyContent: 'center',
      color: 'white',
-     fontSize: 20,
+     fontSize: 15,
+     padding:5,
      
     },
     image: {
@@ -82,28 +85,45 @@ export default StyleSheet.create({
         resizeMode: 'contain',
     },
     moreInfo: {
-        justifyContent: 'center',
-        alignItems: 'center',
         padding: 5,
-        marginBottom: 15,
         position: 'absolute',
-        bottom: 0,
-        borderRadius: 4,
-        borderWidth: 0.5,
-        borderColor: '#d6d7da',
+        bottom: -25,
+        right: -29,
+        
     },
     flipText: {
         color: 'white',
         fontSize: 15,
     },
     backButton:{
-        marginTop: 40,
-        marginLeft: 30,
+        marginTop: 20,
+        marginLeft: 10,
+        marginBottom: 20,
     },
     background:{
         height: '100%',
         width: '100%',
-        resizeMode: 'cover',
         
-    }
+    },
+    backImage:{
+        width: 50,
+        resizeMode: 'contain',
+        height: 50,
+        padding:20,
+    },
+    backContainer:{
+        flex: 1,
+    },
+    voiceButton:{
+        width: '100%',
+        position: 'absolute',
+        bottom: 0,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    voiceImage:{
+        width: 100,
+        resizeMode: 'contain',
+        height: 100,
+    },
 })

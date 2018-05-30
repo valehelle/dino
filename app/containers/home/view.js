@@ -7,7 +7,8 @@ const {
     View,
     Text,
     Image,
-    ImageBackground
+    ImageBackground,
+    TouchableWithoutFeedback
 } = ReactNative
 
 class Home extends Component{
@@ -25,16 +26,19 @@ class Home extends Component{
     render(){
 
         return ( 
-            <ImageBackground style={styles.background} source = {require('../../assests/images/background.jpg')}>
+            <ImageBackground style={styles.background} source = {require('../../assests/images/background3.jpg')}>
             <View style = { styles.container } >
                 
                 <View style = { styles.titleContainer }>
-                <Text style = { styles.title }>Dino Flash Card</Text>
+                    <Image source={ require('../../assests/images/dino_title.png') } style = { styles.title }/> 
                 </View>
                 <View style = { styles.startContainer }>
-                <Button style = { styles.startButton } states={{title: 'Start' ,onPress: this.startButtonPress.bind(this)}} />
-                <Button style = { styles.startButton } states={{title: 'Speech' ,onPress: this.speechButtonPress.bind(this)}} />
-                
+                <TouchableWithoutFeedback onPress={() => this.startButtonPress()}>
+                        <Image
+                            source={ require('../../assests/images/play.png') }
+                            style = { styles.startButton }
+                            />                
+                </TouchableWithoutFeedback>                
                 </View>
             </View>
             </ImageBackground>
