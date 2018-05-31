@@ -25,9 +25,8 @@ export default StyleSheet.create({
     card: {
         backgroundColor: 'rgba(255,255,255, .4)',
         borderRadius: 10,
-        marginBottom: 0,
         alignItems: 'center',
-        height: 320,
+        minHeight: 340,
 
     },
     pronounceCard: {
@@ -54,9 +53,6 @@ export default StyleSheet.create({
      marginBottom: 20,
      fontSize: 30,
      color: 'white',
-          textShadowColor: 'rgba(0, 0, 0, 0.3)',
-     textShadowRadius: 4,
-     textShadowOffset:{width: 4, height:4}
     },
     pronunciation: {
      textAlign: 'center',
@@ -87,8 +83,8 @@ export default StyleSheet.create({
     moreInfo: {
         padding: 5,
         position: 'absolute',
-        bottom: -25,
-        right: -29,
+        bottom: 0,
+        right: 0,
         
     },
     flipText: {
@@ -98,7 +94,8 @@ export default StyleSheet.create({
     backButton:{
         marginTop: 20,
         marginLeft: 10,
-        marginBottom: 20,
+        width: 60,
+        height: 60,
     },
     background:{
         height: '100%',
@@ -106,9 +103,15 @@ export default StyleSheet.create({
         
     },
     backImage:{
-        width: 50,
+        width: 60,
         resizeMode: 'contain',
-        height: 50,
+        height: 60,
+        padding:20,
+    },
+    moreInfoImage:{
+        width: 60,
+        resizeMode: 'contain',
+        height: 60,
         padding:20,
     },
     backContainer:{

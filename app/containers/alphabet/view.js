@@ -58,26 +58,22 @@ class Alphabet extends Component{
     }
 
     _renderFlipBack(){
-        if(true){
             return(
                 <TouchableWithoutFeedback onPress={() => this.flipCard()} style = {styles.moreInfo}>
                     <View style = {styles.moreInfo} >
                                     <Image
                                     source={ require('../../assests/images/info.png') }
-                                    style = { styles.backImage }
+                                    style = { styles.moreInfoImage }
                                     />  
                                 </View>
                 </TouchableWithoutFeedback>
             )
-        }else{
-            return (<View></View>)
-        }
     }
 
     _renderItem ({item, index}) {
         return (
             <View>
-              <CardFlip style={{height: 340}} ref={ (card) => this['card' + index] = card } >
+              <CardFlip perspective= {8000} flipZoom = {0} style={{height: 360}} ref={ (card) => this['card' + index] = card } >
                     <View style={[styles.card ]}>
                         <Text style={styles.alphabet}>{ item.name.charAt(0).toUpperCase() }{ item.name.charAt(0).toLowerCase() }</Text>
                         <Image
