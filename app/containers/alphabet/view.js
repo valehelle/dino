@@ -72,8 +72,8 @@ class Alphabet extends Component{
 
     _renderItem ({item, index}) {
         return (
-            <View>
-              <CardFlip perspective= {8000} flipZoom = {0} style={{height: 360}} ref={ (card) => this['card' + index] = card } >
+            <View style = {{flex:1}}>
+                <CardFlip perspective= {8000} flipZoom = {0} style={{flex: 8, marginBottom:10,}} ref={ (card) => this['card' + index] = card } >
                     <View style={[styles.card ]}>
                         <Text style={styles.alphabet}>{ item.name.charAt(0).toUpperCase() }{ item.name.charAt(0).toLowerCase() }</Text>
                         <Image
@@ -82,8 +82,7 @@ class Alphabet extends Component{
                             
                             />                
                         <Text style={styles.name}>{ item.name }</Text>
-                        {this._renderFlipBack()}
-
+                       
                     </View>
 
                     <View style={[styles.card ]}>
@@ -93,14 +92,12 @@ class Alphabet extends Component{
                             
                             />    
                         <Text style={styles.info}>{ item.description }</Text>
-                        {this._renderFlipFront()}
                     </View>
-
-
-            </CardFlip>
-            <View style={[styles.pronounceCard ]}>
-                <Text style={styles.pronunciation}>{ item.pronunciation }</Text>
-            </View>
+                </CardFlip>
+                <View style={[styles.pronounceCard ]}>
+                    <Text style={styles.pronunciation}>{ item.pronunciation }</Text>
+                </View>
+                
             </View>
         );
     }
@@ -108,7 +105,7 @@ class Alphabet extends Component{
     _renderDinosour(){
         if(this.props.dinosours != undefined ){
             return  (
-                <View style = {styles.container}>
+                <View style = {styles.containerDinosour}>
                         <Carousel
                         ref={(c) => { this._carousel = c; }}
                         data={ this.props.dinosours }
@@ -120,8 +117,7 @@ class Alphabet extends Component{
                         inactiveSlideOpacity={0.7}
                         enableMomentum = {true}
                         onScroll = {this.userScroll.bind(this)}
-                        containerCustomStyle = {{paddingTop: 30, paddingBottom: 60,}}
-                        slideStyle= {{marginRight:10,}}
+                        containerCustomStyle = {{paddingTop: 10}}
                         onSnapToItem= {(index) => {this.newPosition(index)}}
                     />
             </View>
@@ -147,11 +143,14 @@ class Alphabet extends Component{
         return(                        
             <View style = {styles.voiceButton}>
                 <TouchableWithoutFeedback  onPress={() => this.imagePress(0)}>
-                        <View style = {styles.backContainer}>
-                            <Image
-                            source={ require('../../assests/images/voice.png') }
-                            style = { styles.voiceImage }
-                            />  
+                        <View style = {styles.bottomContainer}>
+                            <View style = {styles.voiceContainer}>
+                                <Image
+                                source={ require('../../assests/images/voice.png') }
+                                style = { styles.voiceImage }
+                                />
+                            </View>
+                            {this._renderFlipBack()}  
                         </View>
                 </TouchableWithoutFeedback>
             </View>

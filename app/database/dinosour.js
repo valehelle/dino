@@ -29,7 +29,7 @@ export function dinosourList(){
                 'sound': 'sound.mp3',
                 'image': require('../assests/images/dinosour.jpg'),
                 'pronunciation': 'kon-few-shus-or-niss',
-                'sound': initSound('SampleAudio_0.4mb.mp3'),
+                'sound': initSound('a.m4a'),
                 'description': 'It is the oldest known bird to have a beak.It was named after the Chinese moral philosopher Confucius (551–479 BC). Confuciusornis is one of the most abundant vertebrates found in the Yixian Formation'
             },
             {
@@ -39,7 +39,7 @@ export function dinosourList(){
                 'sound': 'sound.mp3',
                 'image': require('../assests/images/dinosour.jpg'),
                 'pronunciation': 'dah-sen-troo-russ',
-                'sound': initSound('SampleAudio_0.4mb.mp3'),
+                'sound': initSound('a.m4a'),
                 'description': 'Although Dacentrurus is considered to have the same proportions as Stegosaurus, its plate and spike configuration is known to be rather different, as it probably had both two rows of small plates on its neck and two rows of longer spikes along its tail.'
             },
             {
@@ -49,7 +49,7 @@ export function dinosourList(){
                 'sound': 'sound.mp3',
                 'image': require('../assests/images/dinosour2.jpg'),
                 'pronunciation': 'ie-nee-oh-sore-us',
-                'sound': initSound('SampleAudio_0.4mb.mp3'),
+                'sound': initSound('a.m4a'),
                 'description': 'The nasal horn of Einiosaurus is quite unusual in that it curves forward to point towards the ground,‭ ‬something which is reflected in the species name E.‭ ‬procurvicornis which translates to English as‭ "forward curving horn‭".‭ '
             },
             {
@@ -59,7 +59,7 @@ export function dinosourList(){
                 'sound': 'sound.mp3',
                 'image': require('../assests/images/dinosour.jpg'),
                 'pronunciation': 'foo-koo-I-sore-us',
-                'sound': initSound('SampleAudio_0.4mb.mp3'),
+                'sound': initSound('a.m4a'),
                 'description': 'Fukuisaurus is only known from a skull, so the rest of the reconstruction is guesswork based on similar dinosaurs.',
             },    
             {
@@ -69,7 +69,7 @@ export function dinosourList(){
                 'sound': 'sound.mp3',
                 'image': require('../assests/images/dinosour.jpg'),
                 'pronunciation': 'gras-i-li-serra-tops',
-                'sound': initSound('SampleAudio_0.4mb.mp3'),
+                'sound': initSound('a.m4a'),
                 'description': 'Like other ceratopsians, Graciliceratops would have been an herbivore, using its powerful beak and shearing teeth to process tough plant matter. Little is known about the flora of the ancient Gobi Desert, and so it is unclear what it would have eaten.',
             },
             {
@@ -79,7 +79,7 @@ export function dinosourList(){
                 'sound': 'sound.mp3',
                 'image': require('../assests/images/dinosour2.jpg'),
                 'pronunciation': 'ha-grif-us',
-                'sound': initSound('SampleAudio_0.4mb.mp3'),
+                'sound': initSound('a.m4a'),
                 'description': 'Hagryphus is known from only a left hand, fragmentary metatarsals and pedal phalanges (part of a foot), so this reconstruction is based on these and Chirostenotes, a very similar dinosaur.',
             },
             {
@@ -89,7 +89,7 @@ export function dinosourList(){
                 'sound': 'sound.mp3',
                 'image': require('../assests/images/dinosour.jpg'),
                 'pronunciation': 'irr-it-ate-or',
-                'sound': initSound('SampleAudio_0.4mb.mp3'),
+                'sound': initSound('a.m4a'),
                 'description': 'Irritator was quite like Spinosaurus. It is known only from a skull, so the sail is a guess.',
             },    
             {
@@ -99,7 +99,7 @@ export function dinosourList(){
                 'sound': 'sound.mp3',
                 'image': require('../assests/images/dinosour.jpg'),
                 'pronunciation': 'jak-sahr-toh-sore-us',
-                'sound': initSound('SampleAudio_0.4mb.mp3'),
+                'sound': initSound('a.m4a'),
                 'description': '',
             },
             {
@@ -109,7 +109,7 @@ export function dinosourList(){
                 'sound': 'sound.mp3',
                 'image': require('../assests/images/dinosour2.jpg'),
                 'pronunciation': 'ken-TROH-sore-us',
-                'sound': initSound('SampleAudio_0.4mb.mp3'),
+                'sound': initSound('a.m4a'),
                 'description': '',
             },
             {
@@ -119,7 +119,7 @@ export function dinosourList(){
                 'sound': 'sound.mp3',
                 'image': require('../assests/images/dinosour.jpg'),
                 'pronunciation': 'lam-BEE-oh-SORE-us',
-                'sound': initSound('SampleAudio_0.4mb.mp3'),
+                'sound': initSound('a.m4a'),
                 'description': '',
             },    
             {
@@ -129,7 +129,7 @@ export function dinosourList(){
                 'sound': 'sound.mp3',
                 'image': require('../assests/images/dinosour.jpg'),
                 'pronunciation': 'my-ah-SORE-ah',
-                'sound': initSound('SampleAudio_0.4mb.mp3'),
+                'sound': initSound('a.m4a'),
                 'description': '',
             },
             {
@@ -139,7 +139,7 @@ export function dinosourList(){
                 'sound': 'sound.mp3',
                 'image': require('../assests/images/dinosour2.jpg'),
                 'pronunciation': 'no-doh-SORE-us',
-                'sound': initSound('SampleAudio_0.4mb.mp3'),
+                'sound': initSound('a.m4a'),
                 'description': '',
             },
             {
@@ -149,7 +149,7 @@ export function dinosourList(){
                 'sound': 'sound.mp3',
                 'image': require('../assests/images/dinosour.jpg'),
                 'pronunciation': 'or-oh-DROM-ee-us',
-                'sound': initSound('SampleAudio_0.4mb.mp3'),
+                'sound': initSound('a.m4a'),
                 'description': '',
             },
             {
@@ -159,7 +159,7 @@ export function dinosourList(){
                 'sound': 'sound.mp3',
                 'image': require('../assests/images/dinosour.jpg'),
                 'pronunciation': 'pa-ra-saw-ROL-off-us',
-                'sound': initSound('SampleAudio_0.4mb.mp3'),
+                'sound': initSound('a.m4a'),
                 'description': '',
             },
             {
@@ -169,7 +169,7 @@ export function dinosourList(){
                 'sound': 'sound.mp3',
                 'image': require('../assests/images/dinosour2.jpg'),
                 'pronunciation': 'kwee-siet-oh-sore-us',
-                'sound': initSound('SampleAudio_0.4mb.mp3'),
+                'sound': initSound('a.m4a'),
                 'description': '',
             },
             {
@@ -179,7 +179,7 @@ export function dinosourList(){
                 'sound': 'sound.mp3',
                 'image': require('../assests/images/dinosour.jpg'),
                 'pronunciation': 'rin-chen-ee-ah',
-                'sound': initSound('SampleAudio_0.4mb.mp3'),
+                'sound': initSound('a.m4a'),
                 'description': '',
             },
             {
@@ -189,7 +189,7 @@ export function dinosourList(){
                 'sound': 'sound.mp3',
                 'image': require('../assests/images/dinosour.jpg'),
                 'pronunciation': 'STEG-oh-SORE-us',
-                'sound': initSound('SampleAudio_0.4mb.mp3'),
+                'sound': initSound('a.m4a'),
                 'description': '',
             },
             {
@@ -199,7 +199,7 @@ export function dinosourList(){
                 'sound': 'sound.mp3',
                 'image': require('../assests/images/dinosour2.jpg'),
                 'pronunciation': 'tie-RAN-oh-sore-us',
-                'sound': initSound('SampleAudio_0.4mb.mp3'),
+                'sound': initSound('a.m4a'),
                 'description': '',
             },
             {
@@ -209,7 +209,7 @@ export function dinosourList(){
                 'sound': 'sound.mp3',
                 'image': require('../assests/images/dinosour.jpg'),
                 'pronunciation': 'urb-ah-ko-don',
-                'sound': initSound('SampleAudio_0.4mb.mp3'),
+                'sound': initSound('a.m4a'),
                 'description': '',
             },    
             {
@@ -219,7 +219,7 @@ export function dinosourList(){
                 'sound': 'sound.mp3',
                 'image': require('../assests/images/dinosour.jpg'),
                 'pronunciation': 'vel-OSS-ee-rap-tor',
-                'sound': initSound('SampleAudio_0.4mb.mp3'),
+                'sound': initSound('a.m4a'),
                 'description': '',
             },
             {
@@ -229,7 +229,7 @@ export function dinosourList(){
                 'sound': 'sound.mp3',
                 'image': require('../assests/images/dinosour2.jpg'),
                 'pronunciation': 'woo-uhr-huh-sore-us',
-                'sound': initSound('SampleAudio_0.4mb.mp3'),
+                'sound': initSound('a.m4a'),
                 'description': '',
             },
             {
@@ -239,7 +239,7 @@ export function dinosourList(){
                 'sound': 'sound.mp3',
                 'image': require('../assests/images/dinosour.jpg'),
                 'pronunciation': 'Xenoceratops',
-                'sound': initSound('SampleAudio_0.4mb.mp3'),
+                'sound': initSound('a.m4a'),
             },    
             {
                 'id':25,
@@ -248,7 +248,7 @@ export function dinosourList(){
                 'sound': 'sound.mp3',
                 'image': require('../assests/images/dinosour.jpg'),
                 'pronunciation': 'yin-long',
-                'sound': initSound('SampleAudio_0.4mb.mp3'),
+                'sound': initSound('a.m4a'),
                 'description': '',
             }, 
             {
@@ -258,7 +258,7 @@ export function dinosourList(){
                 'sound': 'sound.mp3',
                 'image': require('../assests/images/dinosour.jpg'),
                 'pronunciation': 'zal-moks-eez',
-                'sound': initSound('SampleAudio_0.4mb.mp3'),
+                'sound': initSound('a.m4a'),
                 'description': '',
             },              
             ]

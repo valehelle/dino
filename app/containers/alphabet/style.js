@@ -22,12 +22,14 @@ export default StyleSheet.create({
     container: {
         flex:1,
     },
+    containerDinosour: {
+        flex:7,
+    },
     card: {
         backgroundColor: 'rgba(255,255,255, .4)',
         borderRadius: 10,
         alignItems: 'center',
-        minHeight: 340,
-
+        flex:1,
     },
     pronounceCard: {
         backgroundColor: 'rgba(255,255,255, .4)',
@@ -36,7 +38,7 @@ export default StyleSheet.create({
         alignItems: 'center',
         height: 40,
         justifyContent: 'center',
-
+        flex:1,
     },
     alphabet: {
      textAlign: 'center',
@@ -50,9 +52,9 @@ export default StyleSheet.create({
     },
     name: {
      textAlign: 'center',
-     marginBottom: 20,
      fontSize: 30,
      color: 'white',
+     fontFamily: "KomikaText",
     },
     pronunciation: {
      textAlign: 'center',
@@ -63,7 +65,6 @@ export default StyleSheet.create({
      alignItems: 'center',
      justifyContent: 'center',
      padding:10,
-     height: 420,
      borderRadius: 20,
     },
     info: {
@@ -80,12 +81,8 @@ export default StyleSheet.create({
         marginBottom: 10,
         resizeMode: 'contain',
     },
-    moreInfo: {
-        padding: 5,
-        position: 'absolute',
-        bottom: 0,
-        right: 0,
-        
+    moreInfo: { 
+        flex:1,
     },
     flipText: {
         color: 'white',
@@ -96,6 +93,7 @@ export default StyleSheet.create({
         marginLeft: 10,
         width: 60,
         height: 60,
+        flex:1,
     },
     background:{
         height: '100%',
@@ -112,21 +110,32 @@ export default StyleSheet.create({
         width: 60,
         resizeMode: 'contain',
         height: 60,
-        padding:20,
+        marginLeft:40,
     },
     backContainer:{
-        flex: 1,
+        flex:1,
+        flexDirection:'row'
+    },
+    bottomContainer:{
+        flex:1,
+        flexDirection:'row'
+    },
+    voiceContainer:{
+        flex:1,
+        
     },
     voiceButton:{
-        width: '100%',
-        position: 'absolute',
         bottom: 0,
-        alignItems: 'center',
-        justifyContent: 'center',
+        flex:1,
+        flexDirection: 'column',
+        paddingTop:5,
+        paddingBottom:5,
     },
     voiceImage:{
-        width: 100,
+        width: 60,
         resizeMode: 'contain',
-        height: 100,
+        height: 60,
+        alignSelf: 'flex-end',
+        marginRight: 40,
     },
 })
