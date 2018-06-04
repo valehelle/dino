@@ -75,7 +75,10 @@ class Alphabet extends Component{
             <View style = {{flex:1}}>
                 <CardFlip perspective= {8000} flipZoom = {0} style={{flex: 8, marginBottom:10,}} ref={ (card) => this['card' + index] = card } >
                     <View style={[styles.card ]}>
-                        <Text style={styles.alphabet}>{ item.name.charAt(0).toUpperCase() }{ item.name.charAt(0).toLowerCase() }</Text>
+                        <View style = {styles.alphabetContainer}>
+                            <Text style={styles.alphabetFront}>{ item.name.charAt(0).toUpperCase() }</Text>
+                            <Text style={styles.alphabetBack}>{ item.name.charAt(0).toLowerCase() }</Text>
+                        </View>
                         <Image
                             source={ item.image }
                             style = { styles.image }

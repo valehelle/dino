@@ -40,26 +40,33 @@ export default StyleSheet.create({
         justifyContent: 'center',
         flex:1,
     },
-    alphabet: {
-     textAlign: 'center',
-     marginBottom: 5,
-     fontSize: 50,
-     color: 'white',
-     textShadowColor: 'rgba(0, 0, 0, 0.3)',
-     textShadowRadius: 4,
-     textShadowOffset:{width: 4, height:4},
-     paddingBottom :5,
+    alphabetFront: {
+
+     fontSize: 60,
+     color: '#EF6C00',
+     fontFamily: "KomikaText",
+    },
+    alphabetBack: {
+     fontSize: 60,
+     color: '#c62828',
+     fontFamily: "KomikaText",
+    },
+    alphabetContainer: {
+        paddingLeft:10,
+        flexDirection: 'row',
+        alignSelf: 'flex-start',  
     },
     name: {
      textAlign: 'center',
      fontSize: 30,
-     color: 'white',
+     color: '#4E342E',
      fontFamily: "KomikaText",
     },
     pronunciation: {
      textAlign: 'center',
      fontSize: 20,
-     color: 'white',
+     color: '#F9A825',
+     fontFamily: "KomikaText",
     },
     cardBack: {
      alignItems: 'center',
